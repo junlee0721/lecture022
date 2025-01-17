@@ -1,12 +1,18 @@
 package com.example.lecture022;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping
+@RestController
 public class HelloController {
-	@GetMapping("hello-world")
-	public String helloWorld() {
-		return "Hello World";
-	}
+		@GetMapping("hello-world")
+    public ResponseEntity<String> helloWorld() {
+        return ResponseEntity.ok("Hello World");
+    }
+	
+    @GetMapping("foo")
+    public ResponseEntity<String> foo() {
+        return ResponseEntity.ok("Foo");
+    }
 }
