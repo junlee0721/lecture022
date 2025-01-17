@@ -15,4 +15,8 @@ public class HelloController {
     public ResponseEntity<String> foo() {
         return ResponseEntity.ok("Foo");
     }
+    @GetMapping("cherry")
+    public ResponseEntity<String> cherry() {
+        return ResponseEntity.ok("cherry");
+    }
 }
